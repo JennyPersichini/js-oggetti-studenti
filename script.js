@@ -64,4 +64,27 @@ console.log(students);
 for (let i = 0; i < students.length; i++) {
     console.log("Nome: " + students[i].name);
     console.log("Cognome: " + students[i].surname);
-  } 
+}
+
+//5. Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere all’array creato in precedenza, 
+//un nuovo oggetto studente inserendo nell’ ordine: nome, cognome e età.
+
+let studentUser={
+    name: prompt("Inserire il nome dello studente"),
+    surname: prompt("Inserire il cognome dello studente"),
+    age: prompt("Inserire l'età dello studente")
+}
+
+students.push(studentUser);
+
+//BONUS:
+//Usiamo il DOM per stampare e chiedere le informazioni all'utente!
+
+function PrintStudents(){
+    students.forEach(student => {
+        console.log(`Name : ${student.name}`);
+        console.log(`Surname : ${student.surname}`)
+    })
+}
+
+PrintStudents();
